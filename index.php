@@ -10,7 +10,7 @@ get_header();
                         <img src="<?php echo get_template_directory_uri() . '/assets/dist/svg/logo.svg' ?>" alt="logo">
                     </a>
                     <a class="logo-mobile" href="<?php echo home_url() ?>">
-                        <img src="img/logo-mobile.svg" alt="logo-mobile">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/img/logo-mobile.svg'?>" alt="logo-mobile">
                     </a>
                 </div>
                 <nav class="nav">
