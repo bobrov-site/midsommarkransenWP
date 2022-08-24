@@ -2,26 +2,11 @@
 // abstracts
 @import "abstracts/variables";
 
-// vendors
-@import "node_modules/bootstrap/scss/bootstrap";
-
-// vendors overrides
-// @import "vendors/myvendor";
-
 // base
-@import "base/fonts",
-        "base/base";
+@import "base/core",
+        "base/minireset";
 
-// layout
-@import "layout/header",
-        "layout/footer",
-        "layout/forms",
-        "layout/grid";
+//views
 
-// components
-@import "components/buttons",
-        "components/modal";
-
-// pages
-@import "pages/front-page",
-        "pages/page";
+@import "views/consulting",
+        "views/it-services";

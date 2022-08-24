@@ -1,60 +1,52 @@
+//colors
+$primary: #EB5C28;
+$secondary: #5D8240;
+$black: #202020;
+$white: #FFFFFF;
 
-/**
- * Colors
- *
- */
+//font
 
-// here the colors
+$montserrat: 'Montserrat', sans-serif;
+$orbitron: 'Orbitron', sans-serif;
 
-/**
- * Bootstrap customised
- *
- * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
- */
-$font-size-root:62.5%; // 1rem = 10px
-$font-size-base:1.4rem;
-$line-height-base: 1.5;
-$font-weight-base:400;
-$font-family-sans-serif: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
-$border-radius:.4rem;
-$primary:blue;
-$btn-box-shadow:none;
-$btn-active-box-shadow:none;
-$btn-focus-box-shadow:none;
-$input-btn-focus-box-shadow:none;
-$input-border-radius:0;
-$grid-columns:12;
-$grid-gutter-width:3rem;
-$body-color:black;
+//font-weight
 
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
-);
+$medium: 500;
+$semibold: 600;
+$bold: 700;
 
-$container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1320px
-);
+//font-size
 
-$spacers : (
-    0: 0,
-    1: 1rem,
-    2: 2rem,
-    3: 3rem,
-    4: 4rem,
-    5: 5rem,
-    6: 6rem,
-    7: 7rem,
-    8: 8rem,
-    9: 9rem,
-    10: 10rem
-);
+$h1: 150px;
+$h2: 45px;
+$text: 35px;
+$nav: 22px;
+
+//font-line-height
+
+$h1-lh: 188px;
+$h2-lh: 56px;
+$text-lh: 60px;
+$nav-lh: 27px;
+
+//mixins
+
+@mixin font($font-family-variable, $font-weight-variable, $font-size-variable, $line-height-variable, $color-variable) {
+  font-family: $font-family-variable;
+  font-weight: $font-weight-variable;
+  font-size: $font-size-variable;
+  line-height: $line-height-variable;
+  color: $color-variable;
+}
+
+@mixin link {
+  cursor: pointer;
+  color: $primary;
+  text-decoration: underline;
+}
+
+@mixin linkGreen {
+  cursor: pointer;
+  color: $secondary;
+  text-decoration: underline;
+}
