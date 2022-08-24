@@ -13,9 +13,4 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
-	<header id="masthead" class="site-header">
-
-	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">

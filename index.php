@@ -7,11 +7,3 @@ get_header();
 
         </main><!-- #main -->
     </div><!-- #primary -->
-</div> <!-- #content -->
-</div> <!-- #page -->
-<?php get_footer() ?>
-</body>
-</html>
-
-<?php
-get_footer();
