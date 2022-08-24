@@ -27,15 +27,16 @@ get_header();
                 <div class="lang">
                     <ul id="lang-switch" class="lang-group-list">
                         <li class="lang-item">
-                            <a class="lang-link" href="index.html">
-                                <img class="lang-icon-desktop" src="img/lang/eng.svg" alt="eng">
-                                <img class="lang-icon-mobile" src="img/lang/eng-mobile.png" alt="eng-mobile">
+                            <a class="lang-link" href="<?php echo home_url() ?>">
+                                <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/eng.svg' ?>" alt="eng">
+                                <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/eng-mobile.png' ?>" alt="eng-mobile">
                             </a>
                         </li>
                         <li class="lang-item">
+<!--                            TODO add link to another language-->
                             <a class="lang-link" href="it-services-sweden.html">
-                                <img class="lang-icon-desktop" src="img/lang/sweden.svg" alt="sweden">
-                                <img class="lang-icon-mobile" src="img/lang/sweden-mobile.png" alt="sweden-mobile">
+                                <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
+                                <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . 'assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
                             </a>
                         </li>
                     </ul>
@@ -43,7 +44,7 @@ get_header();
             </header>
         </div>
         <div class="hero-screen-label">
-            <img alt="label-hero" src="img/label.svg">
+            <img alt="label-hero" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/label.svg' ?>">
         </div>
         <div class="wrapper">
             <div class="hero-screen-content">
