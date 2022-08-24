@@ -1,16 +1,11 @@
-import General from './_generalScripts';
-
 const App = {
 
 	/**
 	 * App.init
 	 */
 	init() {
-		// General scripts
-		function initGeneral() {
-			return new General();
-		}
-		initGeneral();
+		// scripts
+		return true;
 	}
 
 };
