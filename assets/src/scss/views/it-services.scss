@@ -287,6 +287,10 @@
       }
       .reference-projects {
         margin-bottom: 93px;
+        .info-group-list {
+          position: relative;
+          z-index: 2;
+        }
         @media screen and (max-width: 1199px) {
           margin-bottom: 85px;
         }
@@ -395,6 +399,7 @@
         height: 1174px;
         background: url("../img/logo-bg.png") no-repeat;
         background-size: contain;
+        z-index: 1;
         @media screen and (max-width: 1659px) {
           width: 100%;
           max-width: 600px;
