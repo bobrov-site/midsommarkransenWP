@@ -1,3 +1,7 @@
+// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved,import/extensions
+import LangSwitch from './_langSwitch';
+
 const App = {
 
 	/**
@@ -5,7 +9,10 @@ const App = {
 	 */
 	init() {
 		// scripts
-		return true;
+		function initLangSwitch() {
+			return new LangSwitch();
+		}
+		initLangSwitch();
 	}
 
 };
