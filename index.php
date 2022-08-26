@@ -10,6 +10,11 @@ $referenceItem2 = $reference['reference_projects_item_2'];
 
 $companyInformation = get_field('company_information_group');
 $companyInformationItem = $companyInformation['fourth_field'];
+
+//languages tags
+$eng = 'en';
+$swe = 'sv';
+$currentLang = wpm_get_language();
 ?>
 <div class="it-services">
     <div class="hero-screen">
@@ -36,19 +41,36 @@ $companyInformationItem = $companyInformation['fourth_field'];
                 </nav>
                 <div class="lang">
                     <ul id="lang-switch" class="lang-group-list">
+                        <?php if ($currentLang == $eng) : ?>
                         <li class="lang-item">
-                            <a class="lang-link" href="<?php echo home_url() ?>">
+                            <a class="lang-link" href="<?php echo home_url('') ?>">
                                 <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/eng.svg' ?>" alt="eng">
                                 <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/eng-mobile.png' ?>" alt="eng-mobile">
                             </a>
                         </li>
                         <li class="lang-item">
 <!--                            TODO add link to another language-->
-                            <a class="lang-link" href="it-services-sweden.html">
+                            <a class="lang-link" href="<?php echo home_url('/sv') ?>">
                                 <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
                                 <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . 'assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
                             </a>
                         </li>
+                        <?php endif; ?>
+                        <?php if ($currentLang == $swe) : ?>
+                            <li class="lang-item">
+                                <!--                            TODO add link to another language-->
+                                <a class="lang-link" href="<?php echo get_site_url(null, '/sv') ?>">
+                                    <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
+                                    <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . 'assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
+                                </a>
+                            </li>
+                            <li class="lang-item">
+                                <a class="lang-link" href="<?php echo get_site_url(null, '') ?>">
+                                    <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/eng.svg' ?>" alt="eng">
+                                    <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/eng-mobile.png' ?>" alt="eng-mobile">
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </header>
@@ -157,3 +179,5 @@ $companyInformationItem = $companyInformation['fourth_field'];
         </div>
     </main>
 </div>
+
+<?php wp_footer(); ?>
