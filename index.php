@@ -1,6 +1,16 @@
 <?php
 get_header();
 ?>
+<?php
+$services = get_field('services_offerings_group');
+
+$reference = get_field('reference_projects_group');
+$referenceItem1 = $reference['reference_projects_item_1'];
+$referenceItem2 = $reference['reference_projects_item_2'];
+
+$companyInformation = get_field('company_information_group');
+$companyInformationItem = $companyInformation['fourth_field'];
+?>
 <div class="it-services">
     <div class="hero-screen">
         <div class="wrapper">
@@ -49,15 +59,15 @@ get_header();
         <div class="wrapper">
             <div class="hero-screen-content">
                 <h1 class="hero-screen-title">
-                    IT Services
+                    <?php the_field('hero_title'); ?>
                 </h1>
                 <p class="hero-screen-description">
-                    When your company want to focus on business instead of IT!
+                    <?php the_field('hero_description'); ?>
                 </p>
             </div>
         </div>
         <div class="hero-screen-provide">
-            WE provide IT services for small and medium size companies on the Swedish market. Our output is focused on cost-efficient delivery and simplicity, no scope creep or upselling. The bulk of    the work is performed by our trusted outsourcing partners.
+            <?php the_field('long_description'); ?>
         </div>
     </div>
     <main>
@@ -68,29 +78,23 @@ get_header();
             </div>
             <div class="info services-offerings">
                 <h2 class="info-title">
-                    Services offerings:
+                    <?php the_field('services_offerings_title'); ?>
                 </h2>
                 <ul class="info-group-list">
                     <li class="info-item">
-                        <span>Registering domain names</span>
+                        <span><?php echo $services['first_field'] ?></span>
                     </li>
                     <li class="info-item">
-                        <span>Web design and wireframing (logo/identity design if needed)</span>
+                        <span><?php echo $services['second_field'] ?></span>
                     </li>
                     <li class="info-item">
-                    <span>
-                        Creating WordPress websites
-                    </span>
+                        <span><?php echo $services['third_field'] ?></span>
                     </li>
                     <li class="info-item">
-                    <span>
-                        Secure hosting and website maintenance
-                    </span>
+                        <span><?php echo $services['fourth_field'] ?></span>
                     </li>
                     <li class="info-item">
-                    <span>
-                        SEO and online marketing (Google Maps, AdWords, et cetera)
-                    </span>
+                        <span><?php echo $services['fifth_field'] ?></span>
                     </li>
                 </ul>
             </div>
@@ -98,14 +102,21 @@ get_header();
         <div class="wrapper footer">
             <div class="info reference-projects">
                 <h2 class="info-title">
-                    Reference projects:
+                    <?php the_field('reference_projects_title'); ?>
                 </h2>
                 <ul class="info-group-list">
                     <li class="info-item">
-                        <span>Corporate identity re-branding for company X <a class="info-item-link" href="#">(visit website)</a></span>
+                        <span><?php echo $referenceItem1['reference_project_text'] ?>
+                            <a class="info-item-link" href="<?php echo $referenceItem1['reference_project_link']?>">
+                                (<?php echo $referenceItem1['reference_project_link_text'] ?>)
+                            </a>
+                        </span>
                     </li>
                     <li class="info-item">
-                        <span>Domain, website and hosting for company Y <a class="info-item-link" href="#">(visit website)</a></span>
+                        <span>
+                            <?php echo $referenceItem2['reference_project_text'] ?>
+                            <a class="info-item-link" href="<?php echo $referenceItem2['reference_project_link'] ?>">(<?php echo $referenceItem2['reference_project_link_text'] ?>)</a>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -114,7 +125,7 @@ get_header();
                     GitHub
                 </h2>
                 <p class="info-text">
-                    Please find us on GitHub for various open-source projects,
+                    <?php the_field('github_text'); ?>
                 </p>
                 <a href="https://github.com/mkdevops-se/" class="info-text info-item-link">
                     https://github.com/mkdevops-se/
@@ -122,21 +133,24 @@ get_header();
             </div>
             <div class="info company-information">
                 <h2 class="info-title">
-                    Company information:
+                    <?php the_field('company_information_title'); ?>
                 </h2>
                 <ul class="info-group-list">
                     <li class="info-item">
-                        <span>Visiting address: Herserudsvägen 18, Lidingö</span>
+                        <span><?php echo $companyInformation['first_field']; ?></span>
                     </li>
                     <li class="info-item">
-                        <span>Organisation number: 559114-7532</span>
+                        <span><?php echo $companyInformation['second_field'] ?></span>
                     </li>
                     <li class="info-item">
-                        <span>F-tax and VAT: Yes \</span>
+                        <span><?php echo $companyInformation['third_field'] ?></span>
                     </li>
                 </ul>
                 <p class="info-text">
-                    Request a quote at <a class="info-item-link mail" href="mailto:sales@mkdevops.se">sales@mkdevops.se</a> or <a class="info-item-link phone" href="tel:+460730567567">+46 (0) 730-567 567</a>.
+                    <?php echo $companyInformationItem['fourth_field_1'] ?>
+                    <a class="info-item-link mail" href="<?php echo 'mailto:' . $companyInformationItem['fourth_field_mail'] ?>"><?php echo $companyInformationItem['fourth_field_mail'] ?></a>
+                    <?php echo $companyInformationItem['fourth_field_2'] ?>
+                    <a class="info-item-link phone" href="<?php echo 'tel:' . $companyInformationItem['fourth_field_phone'] ?>"><?php echo $companyInformationItem['fourth_field_phone'] ?></a>.
                 </p>
             </div>
             <div class="logo-bg"></div>
