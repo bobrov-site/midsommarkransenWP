@@ -106,7 +106,6 @@
           }
           &-item {
             @include font($montserrat,$semibold, $nav, $nav-lh, $primary);
-            opacity: 0.1;
             padding: 18px 55px;
             border-radius: 50px;
             text-transform: uppercase;
