@@ -25,7 +25,7 @@ $currentLang = wpm_get_language();
                         <img src="<?php echo get_template_directory_uri() . '/assets/dist/svg/logo.svg' ?>" alt="logo">
                     </a>
                     <a class="logo-mobile" href="<?php echo home_url() ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/img/logo-mobile.svg'?>" alt="logo-mobile">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/svg/logo-mobile.svg'?>" alt="logo-mobile">
                     </a>
                 </div>
                 <nav class="nav">
@@ -49,16 +49,14 @@ $currentLang = wpm_get_language();
                             </a>
                         </li>
                         <li class="lang-item">
-<!--                            TODO add link to another language-->
                             <a class="lang-link" href="<?php echo home_url('/sv') ?>">
                                 <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
-                                <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . 'assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
+                                <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
                             </a>
                         </li>
                         <?php endif; ?>
                         <?php if ($currentLang == $swe) : ?>
                             <li class="lang-item">
-                                <!--                            TODO add link to another language-->
                                 <a class="lang-link" href="<?php echo get_site_url(null, '/sv') ?>">
                                     <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
                                     <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . 'assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
