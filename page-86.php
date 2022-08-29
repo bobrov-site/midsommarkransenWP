@@ -6,6 +6,11 @@ $assignments = get_field('recent_roles_and_assignments_group');
 
 $companyInformation = get_field('company_information_group');
 $companyInformationItem = $companyInformation['fourth_field'];
+
+//languages tags
+$eng = 'en';
+$swe = 'sv';
+$currentLang = wpm_get_language();
 ?>
 <div class="consulting">
 	<div class="hero-screen">
@@ -25,24 +30,40 @@ $companyInformationItem = $companyInformation['fourth_field'];
 							<a href="<?php echo home_url() ?>" class="nav-link">It services</a>
 						</li>
 						<li class="nav-item active">
-							<a href="#" class="nav-link">Consulting</a>
+							<a href="<?php echo get_the_permalink(86); ?>" class="nav-link">Consulting</a>
 						</li>
 					</ul>
 				</nav>
 				<div class="lang">
 					<ul id="lang-switch" class="lang-group-list">
+                        <?php if ($currentLang == $eng) : ?>
 						<li class="lang-item">
-							<a class="lang-link" href="consulting-eng.html">
+							<a class="lang-link" href="<?php echo get_the_permalink(86) ?>">
 								<img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/eng.svg' ?>" alt="eng">
 								<img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/eng-mobile.png' ?>" alt="eng-mobile">
 							</a>
 						</li>
 						<li class="lang-item">
-							<a class="lang-link" href="consulting-sweden.html">
+							<a class="lang-link" href="<?php echo get_site_url(null, '/sv/consulting') ?>">
 								<img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
 								<img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/sweden-mobile.png' ?>" alt="sweden-mobile">
 							</a>
 						</li>
+                        <?php endif; ?>
+                        <?php if ($currentLang == $swe) : ?>
+                            <li class="lang-item">
+                                <a class="lang-link" href="<?php echo get_site_url(null, '/sv/consulting') ?>">
+                                    <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
+                                    <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/sweden-mobile.png' ?>" alt="sweden-mobile">
+                                </a>
+                            </li>
+                            <li class="lang-item">
+                                <a class="lang-link" href="<?php echo get_site_url(null, '/consulting') ?>">
+                                    <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/eng.svg' ?>" alt="eng">
+                                    <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/eng-mobile.png' ?>" alt="eng-mobile">
+                                </a>
+                            </li>
+                        <?php endif; ?>
 					</ul>
 				</div>
 			</header>
