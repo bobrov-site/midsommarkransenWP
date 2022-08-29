@@ -1,5 +1,5 @@
 <?php
-
+get_header();
 ?>
 
 <div class="consulting">
@@ -7,20 +7,20 @@
 		<div class="wrapper">
 			<header class="d-flex flex-row">
 				<div class="logo">
-					<a class="logo-desktop" href="index.html">
-						<img src="img/logo.svg" alt="logo">
+					<a class="logo-desktop" href="<?php echo home_url() ?>">
+						<img src="<?php echo get_template_directory_uri() . '/assets/dist/svg/logo.svg' ?>" alt="logo">
 					</a>
-					<a class="logo-mobile" href="index.html">
-						<img src="img/logo-mobile.svg" alt="logo-mobile">
+					<a class="logo-mobile" href="<?php echo home_url() ?>">
+						<img src="<?php echo get_template_directory_uri() . '/assets/dist/svg/logo-mobile.svg' ?>" alt="logo-mobile">
 					</a>
 				</div>
 				<nav class="nav">
 					<ul class="nav-group-list">
 						<li class="nav-item">
-							<a href="index.html" class="nav-link">It services</a>
+							<a href="<?php echo home_url() ?>" class="nav-link">It services</a>
 						</li>
 						<li class="nav-item active">
-							<a href="consulting-eng.html" class="nav-link">Consulting</a>
+							<a href="#" class="nav-link">Consulting</a>
 						</li>
 					</ul>
 				</nav>
@@ -28,14 +28,14 @@
 					<ul id="lang-switch" class="lang-group-list">
 						<li class="lang-item">
 							<a class="lang-link" href="consulting-eng.html">
-								<img class="lang-icon-desktop" src="img/lang/eng.svg" alt="eng">
-								<img class="lang-icon-mobile" src="img/lang/eng-mobile.png" alt="eng-mobile">
+								<img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/eng.svg' ?>" alt="eng">
+								<img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/eng-mobile.png' ?>" alt="eng-mobile">
 							</a>
 						</li>
 						<li class="lang-item">
 							<a class="lang-link" href="consulting-sweden.html">
-								<img class="lang-icon-desktop" src="img/lang/sweden.svg" alt="sweden">
-								<img class="lang-icon-mobile" src="img/lang/sweden-mobile.png" alt="sweden-mobile">
+								<img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
+								<img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/sweden-mobile.png' ?>" alt="sweden-mobile">
 							</a>
 						</li>
 					</ul>
@@ -43,7 +43,7 @@
 			</header>
 		</div>
 		<div class="hero-screen-label">
-			<img alt="label-hero" src="img/label.svg">
+			<img alt="label-hero" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/label.svg' ?>">
 		</div>
 		<div class="wrapper">
 			<div class="hero-screen-content">
@@ -128,3 +128,5 @@
 		</div>
 	</main>
 </div>
+
+<?php wp_footer(); ?>
