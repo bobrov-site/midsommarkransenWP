@@ -58,7 +58,7 @@ $currentLang = wpm_get_language();
                             <li class="lang-item">
                                 <a class="lang-link" href="<?php echo get_site_url(null, '/sv') ?>">
                                     <img class="lang-icon-desktop" src="<?php echo get_template_directory_uri() . '/assets/dist/svg/lang/sweden.svg' ?>" alt="sweden">
-                                    <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . 'assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
+                                    <img class="lang-icon-mobile" src="<?php echo get_template_directory_uri() . '/assets/dist/img/lang/sweden-mobile.png'?>" alt="sweden-mobile">
                                 </a>
                             </li>
                             <li class="lang-item">
