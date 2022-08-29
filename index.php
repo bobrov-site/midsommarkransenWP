@@ -35,7 +35,7 @@ $currentLang = wpm_get_language();
                         </li>
 <!--                        TODO add link to consulting-eng-->
                         <li class="nav-item">
-                            <a href="consulting-eng.html" class="nav-link">Consulting</a>
+                            <a href="<?php echo get_permalink(86) ?>" class="nav-link">Consulting</a>
                         </li>
                     </ul>
                 </nav>
