@@ -6,6 +6,6 @@ function _add_javascript() {
 add_action('wp_enqueue_scripts', '_add_javascript', 100);
 
 function _add_stylesheets() {
-	wp_enqueue_style('theme', get_template_directory_uri() . '/assets/dist/css/main.css', array(), null, 'all' );
+	wp_enqueue_style('theme', get_template_directory_uri() . '/assets/dist/css/main.css', array(), 1.1, 'all' );
 }
 add_action('wp_enqueue_scripts', '_add_stylesheets');

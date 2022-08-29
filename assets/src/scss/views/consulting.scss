@@ -370,7 +370,13 @@
             display: block;
           }
         }
+        .mail {
+          position: relative;
+          z-index: 2;
+        }
         .phone {
+          position: relative;
+          z-index: 2;
           @media screen and (max-width: 767px) {
             display: unset;
           }
@@ -393,6 +399,7 @@
         height: 908px;
         background: url("../img/leaves-bg.png") no-repeat;
         background-size: contain;
+        z-index: 1;
         @media screen and (max-width: 1659px) {
           width: 100%;
           max-width: 600px;
